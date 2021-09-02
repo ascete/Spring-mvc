@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+    <style type="text/css">
+        TABLE {
+            width: 50%;
+            border: 1px solid #399;
+            border-spacing: 7px 5px;
+        }
+        TD {
+            background: #fc0;
+            border: 1px solid #333;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <caption>Cars</caption>
+    <thead>
+    <tr>
+        <th>Model</th>
+        <th>Color</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.getModel()}"></td>
+        <td th:text="${car.getColor()}"></td>
+        <td th:text="${car.getPrice()}"></td>
+    </tr>
+    </tbody>
+
+</table>
+
+</body>
+</html>
